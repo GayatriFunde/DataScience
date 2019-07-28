@@ -26,7 +26,7 @@ titanic_combined.info()
 
 #Extract and create title from name column
 def extract_title(name):
-    name.split(',')[1].split('.')[0].strip()
+    return name.split(',')[1].split('.')[0].strip()
     
 #map function applies a passed in function to each item in an iterable object and returns a list containing all function call results.
 titanic_combined['title'] = titanic_combined['Name'].map(extract_title)
